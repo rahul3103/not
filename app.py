@@ -6,6 +6,8 @@ from flask_bootstrap import Bootstrap
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
 
+app.secret_key = 'super_secret_key'
+
 
 def setup_db():
     create_model_tables([Users, Notepad], fail_silently=True)
@@ -82,5 +84,4 @@ def logout():
 
 
 if __name__ == '__main__':
-    app.secret_key = 'super_secret_key'
     app.run(debug=True)
