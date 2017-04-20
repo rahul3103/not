@@ -32,7 +32,8 @@ def signup():
             return render_template('note.html', fid=fid, name=name)
         else:
             return render_template('signup.html')
-    except:
+    except Exception:
+        raise
         msg = "Email was already taken"
         return render_template('signup.html', msg=msg)
 
