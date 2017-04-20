@@ -2,4 +2,4 @@ flask
 peewee
 passlib
 flask_bootstrap
-gunicorn
+uwsgi
